@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Daftar menu</h1>
+
+<ul>
+  <li>bakso</li>
+  <li>soto</li>
+  <li>mie</li>
+</ul>
+  <script> 
+ //let namaabi = "tofan"
+ //nama = "upi"
+ //umur = 17;
+ //console.log ("nama saya : " + namaabi, "nama panggilan :  " + nama, "Umur Saya : " + umur);
+
+
+  // type data array
+  // let menu = ["bakso", "soto", "mie", "kurupuk", "ayam"];
+  // let pesananFarrel = menu[0];
+  // let pesananTofan = menu[4];
+  // let pesananFathan = menu[4];
+
+  // console.log ("pesanan Farrel " + pesananFarrel,
+  //  "sedangkan Tofan memesan " + pesananTofan,
+   //  "dan pesaanan fathan adalah " + pesananFathan);
+
+
+     //let jenismakanan = ["mieayam", "sosis", "soto",];
+     //let nama = prompt ('');
+    // let pesananSaya = jenismakanan[0];
+
+    //let nama = prompt('');
+   // let umur = prompt('');
+   // let alamat = prompt('');
+    // console.log ("Nama Saya: " + nama, "umur Saya: " + umur,  "Alamat saya: " + alamat);
+
+    // let namasaya = prompt('');
+     //namasayuran = prompt('');
+     //harga = prompt('');
+
+    //console.log ("Pesenan anda atas nama : " + namasaya, "Barang Yang Di Beli : " + namasayuran, "harga sayuran :" + harga);
+  
+  </script>
+
+<div class="container mt-5">
+  <h2 class="mb-4">Hasil Pesanan</h2>
+
+  <div class="card bg-danger" style="max-width: 600px;">
+    <div class="row  align-items-center">
+      <div class="col-md-4 text-center p-3">
+        <!-- Gan  ti URL ini dengan foto sayuran yang diinginkan -->
+        <img src="https://i1.wp.com/www.kampustani.com/wp-content/uploads/2020/06/Cara-menanam-kangkung-organik-1.jpg"width="150" height="auto" objectiv-fit="auto" border-radius="8" alt="Foto Sayuran" class="img-produk" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h4 class="card-title" id="nama"></h4>
+          <p class="card-text" id="sayuran"></p>
+          <p class="card-text" id="harga"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-primary mt-3" style="max-width: 600px;">
+    <div class="row  align-items-center">
+      <div class="col-md-4 text-center p-3">
+        <!-- Ganti URL ini dengan foto sayuran yang diinginkan -->
+        <img src="https://i1.wp.com/www.kampustani.com/wp-content/uploads/2020/06/Cara-menanam-kangkung-organik-1.jpg"width="150" height="auto" objectiv-fit="auto" border-radius="8" alt="Foto Sayuran" class="img-produk" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" id="panggilan"></h5>
+          <p class="card-text" id="Sayuran"></p>
+          <p class="card-text" id="harga2"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // Ambil input dari user pesanan ke 1
+  let namasaya = prompt('Masukkan nama Anda ("pesanan 1") :');
+  let namasayuran = prompt('Masukkan nama sayuran yang dibeli ("pesanan 1") :');
+  let harga = prompt('Masukkan harga sayuran ("pesanan 1") :');
+
+  // Ambil imputan dari user pesanan ke 2
+  let namapanggilan2 = prompt('Nama ke 2 anda ("pesanan 2");')
+  let namasayuran2 = prompt('masukan pesanan ke 2 anda ("pesanan 2");')
+  let hargaproduk = prompt('masukan harga pesanan ke 2 anda ("pesanan 2");')
+
+  // Masukkan hasilnya ke card
+  document.getElementById("nama").innerText = "Pemesanan atas nama: " + namasaya;
+  document.getElementById("sayuran").innerText = "Sayuran yang dibeli: " + namasayuran;
+  document.getElementById("harga").innerText = "Harga: Rp. " + harga;
+
+  //card ke 2
+  document.getElementById("panggilan").innerText = "pesanan kedua anda atas nama: " + namapanggilan2;
+  document.getElementById("Sayuran").innerText = "Sayuran Yang akan Beli: " + namasayuran2;
+  document.getElementById("harga2").innerText = "Harga: Rp." +hargaproduk;
+</script>
+
+
+<!-- latihan uji -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

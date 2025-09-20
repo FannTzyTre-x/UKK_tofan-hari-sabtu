@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SMKN 4 Tasikmalaya</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* General */
+      body {
+        font-family: "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+      h2,
+      h3 {
+        font-weight: bold;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: rgba(69, 227, 255, 0.8);
+        backdrop-filter: blur(5px);
+        border: 2px solid black;
+      }
+
+      /* Carousel */
+      .carousel img {
+        height: 450px;
+        object-fit: cover;
+      }
+      .carousel-caption-custom {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-shadow: 1px 1px 3px black;
+        text-align: center;
+      }
+
+      /* Cards umum */
+      .card img {
+        border-radius: 8px;
+        object-fit: cover;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        transition: 0.3s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Statistik (Total Guru/Siswa) */
+      .total-section {
+        background-color: #31e8f5;
+        padding: 40px 0;
+        border-radius: 8px;
+      }
+      .total-card h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Why Us */
+      .why-us-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+        margin: 60px auto;
+      }
+      .why-us-text {
+        flex: 1 1 50%;
+      }
+      .why-us-image {
+        flex: 1 1 40%;
+      }
+      .why-us-image img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .feature-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .feature-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        background: #31e8f5;
+        border-radius: 50%;
+        color: white;
+      }
+
+      /* Footer */
+      footer {
+        background: #31e8f5;
+        color: white;
+        padding: 20px 0;
+        margin-top: 50px;
+      }
+      footer a {
+        color: white;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top rounded-4 fw-bold px-4 my-2">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="https://1.bp.blogspot.com/-TvAfTQttnag/VmOGnts3X0I/AAAAAAAACx8/LU5_7BaTWPQ/s320/LOGO%2BSMKN4%2B2015.png"
+            alt="Logo SMKN 4"
+            width="40"
+            class="me-2"
+          />
+          <span>SMKN 4<br />Tasikmalaya</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="halaman ekstrakulikuler.html">Ekstrakurikuler</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="halaman galeri.html">Galeri</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                >Profil</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="VIsidanmisi.html">Visi & Misi</a></li>
+                <li><a class="dropdown-item" href="halaamansejarah.html">Sejarah</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://websmkn4-tsm-sand.vercel.app/_nuxt/skul.C4Xe_xko.jpg"
+            class="d-block w-100"
+            alt="Sekolah"
+          />
+          <div class="carousel-caption-custom">
+            <h3>Selamat Datang</h3>
+            <p>di SMKN 4 Tasikmalaya</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fasilitas / Kelebihan -->
+    <div class="container my-5">
+      <div class="row g-4 text-center" id="FasilitasComponent">
+    </div>
+
+    <!-- Sambutan Kepsek -->
+    <div class="container my-5">
+      <div class="row align-items-start">
+        <div class="col-md-4 text-center">
+          <img
+            src="https://website-sekolah-flame.vercel.app/_nuxt/kepsek.ZO4MKKTj.jpg"
+            class="img-fluid rounded mb-3"
+          />
+          <p>
+            <strong>Kepala Sekolah</strong><br />Bpk. Kurniawan, S.Pd, M.Pd<br />
+            <small>NIP: 19720809 199702 1 002</small>
+          </p>
+        </div>
+        <div class="col-md-8">
+          <h2 class="judul">Sambutan Kepala Sekolah</h2>
+          <p class="pembuka">Assalamualaikum Wr. Wb</p>
+          <p>
+            Selamat datang di SMKN 4 Tasikmalaya. Segala puji dan syukur kita
+            panjatkan kehadirat Allah SWT, semoga kita semua ada dalam
+            lindungan-Nya. Dan atas perkenan-Nya pula kami dapat menghadirkan
+            website SMK Negeri 4 Tasikmalaya ini.
+          </p>
+          <p>
+            Kami berharap dengan adanya website ini para pengunjung dapat
+            mengenal lebih jauh tentang sekolah kami sehingga dapat mempererat
+            tali silaturrahmi antara sekolah dengan masyarakat demi kemajuan
+            kita bersama.
+          </p>
+          <p>
+            Tiada gading yang tak retak, website kami ini masih dalam proses
+            pengembangan. Kritik dan saran yang membangun sangat kami harapkan
+            untuk pengembangan ke depan.
+          </p>
+          <p>
+            Akhirnya, saya mengucapkan terima kasih yang sebesar-besarnya kepada
+            semua pihak atas segala bantuan dan fasilitas yang telah diberikan.
+            Semoga semua yang kita lakukan bermanfaat bagi masyarakat.
+          </p>
+          <p class="penutup">Wassalamualaikum Wr. Wb</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- News -->
+    <section class="container my-5">
+      <h2 class="mb-4"><i class="bi bi-globe"></i> Berita Terkini</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <img
+              src="https://assets.radartasik.id/main/2023/10/SMKN-4.jpg"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">SMKN 4 Tasikmalaya Koneksikan Iduka</h5>
+              <p class="card-text">
+                SMKN 4 Tasikmalaya menghubungkan industri dengan pencari kerja.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <img
+              src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/03/02/IMG_20230302_120715-2211547420.jpg"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Kerjasama dengan DAM</h5>
+              <p class="card-text">
+                SMKN 4 menjalin kerjasama strategis dalam bidang otomotif.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistik -->
+    <section class="total-section text-center text-white">
+      <div class="container">
+        <h3 class="mb-4">
+          <i class="bi bi-bar-chart-fill"></i> Total Guru & Siswa
+        </h3>
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <div class="total-card">
+              <h2><i class="bi bi-person-fill"></i> 100</h2>
+              <p>Guru</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="total-card">
+              <h2><i class="bi bi-people-fill"></i> 180</h2>
+              <p>Staff</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="total-card">
+              <h2><i class="bi bi-mortarboard-fill"></i> 800</h2>
+              <p>Siswa</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="total-card">
+              <h2><i class="bi bi-building-fill"></i> 25</h2>
+              <p>Kelas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us-section container">
+      <div class="why-us-text">
+        <h2>Kenapa Memilih <span>Kami</span></h2>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div>
+            <h5>Guru Berkualitas</h5>
+            <p>Dibimbing oleh tenaga profesional.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-award"></i></div>
+          <div>
+            <h5>Prestasi Membanggakan</h5>
+            <p>Prestasi akademik dan non-akademik tingkat nasional.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-users"></i></div>
+          <div>
+            <h5>Lingkungan Positif</h5>
+            <p>Disiplin, toleransi, dan kerja sama dijunjung tinggi.</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-us-image">
+        <img
+          src="https://website-sekolah-flame.vercel.app/_nuxt/2.Bg_1sRwl.jpg"
+        />
+      </div>
+    </section>
+
+    <!-- Jurusan / Program Keahlian -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">
+        <i class="bi bi-journal-bookmark-fill"></i> Jurusan
+      </h2>
+      <div class="row g-4 justify-content-center" id="JurusanComponent"></div>
+
+    </section>
+
+    <!-- Footer / Alamat -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Alamat</h5>
+            <p>
+              SMKN 4 Tasikmalaya<br />
+              Jl. Depok, Sukamenak, Purbaratu, Kota Tasikmalaya, Jawa Barat
+              46196
+            </p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.213116362029!2d108.25189907500041!3d-7.329945292678408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f59eeb6bda36f%3A0xa9e724a275da6c2d!2sSMK%20Negeri%204%20Tasikmalaya!5e0!3m2!1sid!2sid!4v1758345717334!5m2!1sid!2sid"
+              width="500px"
+              height="200"
+              style="border: 0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="col-md-3">
+            <h5>Kontak</h5>
+            <p><i class="bi bi-telephone"></i> +62 265 312059</p>
+            <p><i class="bi bi-envelope-at"></i> info@smkn4-tsm.sch.id</p>
+          </div>
+          <div class="col-md-3">
+            <h5>Tautan</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Kemendikbud</a></li>
+              <li><a href="#">Provinsi Jabar</a></li>
+              <li><a href="#">Ruang GTK</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center">
+          &copy; 2025 SMKN 4 Tasikmalaya | Dibuat dengan Bootstrap oleh Tofan
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // logika data jurusan Dalam bentuk array
+      let jurusan = [
+        {
+          gambar: "https://web-sekolah-tawny.vercel.app/_nuxt/10.Dc3lvKQn.png",
+          nama: "Rekayasa Perangkat Lunak",
+          deskripsi:"Konsentrasi keahlian ini mempelajari cara merancang, mengembangkan, dan memelihara perangkat lunak, termasuk aplikasi berbasis desktop, web, dan mobile. Siswa juga diajarkan teknik pembuatan gim, seperti desain level, animasi, dan pemrograman gim, menggunakan teknologi dan perangkat lunak terkini.",
+        },
+        {
+          gambar: "https://web-sekolah-tawny.vercel.app/_nuxt/8.BGpmPo-N.png",
+          nama: "Teknik Komputer & Jaringan Komputer",
+          deskripsi:"Konsentrasi keahlian ini fokus pada penguasaan konsep dan praktik dalam membangun, mengelola, dan mengamankan jaringan komputer. Siswa akan mempelajari teknologi jaringan, administrasi server, troubleshooting, serta konfigurasi perangkat jaringan seperti router dan switch.",
+        },
+        {
+          gambar: "https://web-sekolah-tawny.vercel.app/_nuxt/9.pKvXDRNg.png",
+          nama: "Teknik & Bisnis Sepeda Motor",
+          deskripsi:"Konsentrasi keahlian ini mempelajari teknik perawatan, perbaikan, dan modifikasi sepeda motor, sekaligus menanamkan keterampilan kewirausahaan. Siswa diajarkan cara membuka dan mengelola bisnis bengkel, termasuk aspek pemasaran dan manajemen.",
+        },
+        {
+          gambar: "https://web-sekolah-tawny.vercel.app/_nuxt/7.BqMZVcIf.png",
+          nama: "Desain Komunikasi Visual",
+          deskripsi:"Konsentrasi keahlian ini mengajarkan seni dan teknik dalam menciptakan desain visual yang komunikatif dan menarik. Materi meliputi desain grafis, fotografi, ilustrasi, dan media digital untuk kebutuhan branding, promosi, atau media publikasi.",
+        },
+        {
+          gambar: "https://web-sekolah-tawny.vercel.app/_nuxt/6.Bex29gdO.png",
+          nama: "Teknik Otomasi Industri",
+          deskripsi:"Konsentrasi keahlian ini berfokus pada teknologi otomotif yang diterapkan dalam skala industri. Siswa akan belajar tentang sistem mekanik kendaraan modern, produksi komponen otomotif, dan pengelolaan peralatan industri yang berkaitan dengan otomotif.",
+        },
+      ];
+// Logika Pengulangan  Data Diri Array yang di antar ke dalam compinent card
+      let JurusanComponent = document.getElementById("JurusanComponent");
+
+      // setiap card ubah jadi beda warna
+      let warnaCard = "bg-light";
+      jurusan.forEach((jurusan) => {
+        if (jurusan.nama === "Rekayasa Perangkat Lunak") {
+          warnaCard = "bg-success text-white";
+        } else if (jurusan.nama === "Teknik Komputer & Jaringan Komputer") {
+          warnaCard = "bg-primary text-white";
+        } else if (jurusan.nama === "Teknik & Bisnis Sepeda Motor") {
+          warnaCard = "bg-danger text-dark";
+        } else if (jurusan.nama === "Desain Komunikasi Visual") {
+          warnaCard = "bg-warning text-white";
+        } else if (jurusan.nama === "Teknik Otomasi Industri") {
+          warnaCard = "bg-light text-dark";
+        } else {
+          warnaCard = "bg-light";
+        }
+        JurusanComponent.innerHTML +=`
+                <div class="col-md-4">
+          <div class="card ${warnaCard} border-drak h-100 text-center p-3">
+            <img class=" fa-3x text-primary mb-3" src=${jurusan.gambar} alt="${jurusan.nama}" />
+            <h5>${jurusan.nama}</h5>
+            <p>${jurusan.deskripsi}</p>
+          </div>
+        </div>
+        `;
+      })
+
+            // logika data fasilitas data Dalam bentuk array
+
+            let fasilitas = [
+              {
+                icon: "bi-building",
+                nama: "Fasilitas Lengkap",
+                deskripsi:
+                  "Fasilitas modern dan lengkap mendukung pembelajaran efektif.",
+              },
+              {
+                icon: "bi bi-person-badge",
+                nama: "Guru Profesional",
+                deskripsi:
+                  "Dibimbing oleh tenaga pendidik berpengalaman dan berdedikasi.",
+              },
+              {
+                icon: "bi bi-trophy ",
+                nama: "Prestasi Membanggakan",
+                deskripsi: "Banyak prestasi tingkat regional hingga nasional.",
+              },
+            ];
+// Logika Pengulangan  Data Diri Array yang di antar ke dalam compinent card
+            let FasilitasComponent = document.getElementById("FasilitasComponent");
+            
+            // setiap card yang di fasilitas akan diubah jadi beda warna
+            let warnaCardFasilitas = "bg-light";
+            fasilitas.forEach((fasilitas) =>{
+              if (fasilitas.nama === "Fasilitas Lengkap") {
+                warnaCardFasilitas = "bg-danger text-white";
+                warnaTextCardFasilitas = "text-drak";
+              } else if (fasilitas.nama === "Guru Profesional") {
+                warnaCardFasilitas = "bg-primary text-white";
+
+              } else if (fasilitas.nama === "Prestasi Membanggakan") {
+                warnaCardFasilitas = "bg-success text-white";
+              } else {
+                warnaCardFasilitas = "bg-light";
+              }
+              FasilitasComponent.innerHTML +=`
+                      <div class="col-md-4">
+          <div class="card rounded ${warnaCardFasilitas} p-3 h-100">
+            <i class="bi bi-building ${fasilitas.icon} ${warnaTextCardFasilitas} fs-1 text-black"></i>
+            <h5>${fasilitas.nama}</h5>
+            <p>${fasilitas.deskripsi}</p>
+          </div>
+        </div>
+              `;})
+    </script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
